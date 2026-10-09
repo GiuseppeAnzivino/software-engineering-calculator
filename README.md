@@ -109,9 +109,9 @@ The complete software engineering documentation is organized chronologically fol
 ---
 
 ## 📺 Video Demo
-Guarda la dimostrazione pratica del funzionamento della calcolatrice e dell'interfaccia grafica:
 
-<video width="100%" controls>
-  <source src="assets/demo.mp4" type="video/mp4">
-  Il tuo browser non supporta il tag video. Puoi scaricare il video <a href="assets/demo.mp4">qui</a>.
-</video>
+Watch a practical demonstration of the calculator and graphical user interface:
+
+[![Calculator Video Demo](https://img.youtube.com/vi/FplfppbxDv4/maxresdefault.jpg)](https://youtu.be/FplfppbxDv4)
+
+*(If you prefer to download or view the raw file directly, you can find it in the [`assets/demo.mp4`](assets/demo.mp4) folder).*
