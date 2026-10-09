@@ -15,6 +15,7 @@
 ## 📋 Table of Contents
 - [About the Project](#-about-the-project)
 - [Project Planning & Methodology](#-project-planning--methodology)
+- [Project Documentation (`/docs`)](#-project-documentation-docs)
 - [Architecture & Design Patterns](#-architecture--design-patterns)
 - [Tech Stack & Implementation](#-tech-stack--implementation)
 - [Testing & Quality Assurance](#-testing--quality-assurance)
@@ -33,6 +34,17 @@ The software engineering lifecycle encompassed complete project planning, WBS (W
 * **Development Model:** Waterfall model (structured macro-phases: Planning, Requirements Engineering, System Design, Implementation, and Testing).
 * **Scheduling & Tracking:** Managed via Gantt charts and Work Breakdown Structures (WBS) (using GanttPRO and dedicated tracking documents) to ensure strict adherence to milestones.
 * **Traceability:** Maintained through a comprehensive Traceability Matrix linking requirements, design artifacts, and test cases across the lifecycle.
+
+---
+
+## 📂 Project Documentation (`/docs`)
+The complete software engineering documentation is organized chronologically following the waterfall lifecycle and is stored inside the `docs/` directory:
+
+1. **[01_Software_Project_Planning.pdf](docs/01_Software_Project_Planning.pdf)**: Project organization, WBS, Gantt scheduling, and resource allocation.
+2. **[02_Software_Project_Requisiti.pdf](docs/02_Software_Project_Requisiti.pdf)**: Requirements elicitation, use cases, and functional specifications.
+3. **[03_Software_Project_Design.pdf](docs/03_Software_Project_Design.pdf)**: System architecture (Shared Repository), UML class/sequence diagrams, activity/state diagrams, and code metrics (LCOM and Coupling).
+4. **[04_Software_Project_Implementation.pdf](docs/04_Software_Project_Implementation.pdf)**: Implementation details, UI design with JavaFX Scene Builder, and traceability matrix updates.
+5. **[05_Software_Project_Testing.pdf](docs/05_Software_Project_Testing.pdf)**: Comprehensive test planning, functional end-to-end test cases (FTC), and automated JUnit unit test suites (UTC) for the core model.
 
 ---
 
@@ -63,6 +75,35 @@ The software engineering lifecycle encompassed complete project planning, WBS (W
 * **Automated Unit Tests (JUnit):** Exhaustive test suites covering all core classes with 100% passing results:
   * `ComplexTest`: Validates real/imaginary getters, string formatting, zero checks, basic arithmetic (+, -, *, /), square roots (`sqrt`), and sign inversion (`reverse`).
   * `OperationTest`: Verifies correct execution of operations directly through the stack layer and proper exception throwing.
+  * `ParserTest`: Tests string tokenization, number checks (`isComplex`, `isRealPart`, `isJPart`), parsing logic, and syntax exception handling.
+  * `StackTest`: Ensures stack behavior under `clear`, `drop`, `dup`, `swap`, and `over` commands including edge cases on empty stacks.
+  * `VarMapTest`: Tests variable storage, stack-to-variable (`>var`) and variable-to-stack (`<var`) transfers, arithmetic variable updates (`+var`, `-var`), and mapping string outputs.
+
+---
+
+## ✨ Key Features & Requirements
+
+### 1. Complex Numbers & Basic Operations
+* Support for complex numbers in Cartesian notation (e.g., `7.2+4.9j`, treating pure real numbers as numbers with a zero imaginary part).
+* Core arithmetic operations: 
+  * `+` (Addition), `-` (Subtraction), `*` (Multiplication), `/` (Division)
+  * `sqrt` (Square root), `+-` (Invert sign)
+
+### 2. Stack Manipulation Commands
+* Stack visualization displaying at least the top **12 elements**.
+* `clear`: Removes all elements from the stack.
+* `drop`: Removes the top element.
+* `dup`: Duplicates the top element.
+* `swap`: Exchanges the last two elements.
+* `over`: Pushes a copy of the second-to-last element.
+
+### 3. Variables Memory (26 Registers)
+* Supports 26 variables named from `a` to `z` with a dedicated variables interface screen.
+* Operations:
+  * `>x`: Pops the top stack value and saves it into variable `x`.
+  * `<x`: Pushes the value of variable `x` onto the stack.
+  * `+x`: Adds the top stack value to variable `x`.
+  * `-x`: Subtracts the top stack value from variable `x`.  * `OperationTest`: Verifies correct execution of operations directly through the stack layer and proper exception throwing.
   * `ParserTest`: Tests string tokenization, number checks (`isComplex`, `isRealPart`, `isJPart`), parsing logic, and syntax exception handling.
   * `StackTest`: Ensures stack behavior under `clear`, `drop`, `dup`, `swap`, and `over` commands including edge cases on empty stacks.
   * `VarMapTest`: Tests variable storage, stack-to-variable (`>var`) and variable-to-stack (`<var`) transfers, arithmetic variable updates (`+var`, `-var`), and mapping string outputs.
