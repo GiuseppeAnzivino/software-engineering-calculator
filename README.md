@@ -15,6 +15,8 @@
 ## 📋 Table of Contents
 - [About the Project](#-about-the-project)
 - [Project Planning & Methodology](#-project-planning--methodology)
+- [Architecture & Design Patterns](#-architecture--design-patterns)
+- [Tech Stack & Implementation](#-tech-stack--implementation)
 - [Key Features & Requirements](#-key-features--requirements)
 
 ---
@@ -28,8 +30,29 @@ The software engineering lifecycle encompassed complete project planning, WBS (W
 
 ## 📊 Project Planning & Methodology
 * **Development Model:** Waterfall model (structured macro-phases: Planning, Requirements Engineering, System Design, Implementation, and Testing).
-* **Scheduling & Tracking:** Managed via Gantt charts and Work Breakdown Structures (WBS) to ensure strict adherence to project milestones and delivery constraints.
-* **Traceability:** Maintained through a comprehensive Traceability Matrix linking requirements, design artifacts, and test cases.
+* **Scheduling & Tracking:** Managed via Gantt charts and Work Breakdown Structures (WBS) (using GanttPRO and dedicated tracking documents) to ensure strict adherence to milestones.
+* **Traceability:** Maintained through a comprehensive Traceability Matrix linking requirements, design artifacts, and test cases across the lifecycle.
+
+---
+
+## 🏗️ Architecture & Design Patterns
+* **Shared Repository Architecture:** The system relies on a centralized persistent component layout to facilitate data sharing across modules.
+* **UML Modeling:** Extensive design phase incorporating **Class Diagrams**, **Sequence Diagrams** (for operands insertion, operations, stack manipulation, and variable management), **Activity Diagrams**, and **State Machine Diagrams**.
+* **Code Metrics:** Analyzed via LCOM (Lack of Cohesion of Methods) and Coupling metrics to evaluate system modularity and dependencies stemming from shared data structures.
+
+---
+
+## 🛠️ Tech Stack & Implementation
+* **Language & Build Tool:** Java, managed via **Maven** (`pom.xml`) for dependency handling and project building.
+* **IDE:** NetBeans
+* **UI Framework:** JavaFX, designed using **JavaFX Scene Builder 2.0** (supporting dual interfaces: Standard Calculator and Variables View).
+* **Core Components:**
+  * `FXMLDocumentController`: Manages UI interactions and event handling.
+  * `Parser`: Handles string-to-complex conversions, syntax validation, and command routing.
+  * `Stack`: Manages stack data structures (Deque) and manipulation commands.
+  * `Operation`: Implements arithmetic and algebraic logic.
+  * `VarMap`: Manages the 26 variable memory registers (`a` to `z`).
+  * Custom Exception classes (`EmptyStackException`, `FullStackException`, `ArithmeticException`, `OverflowException`, `InputException`, `VarException`).
 
 ---
 
