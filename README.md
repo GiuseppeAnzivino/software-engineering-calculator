@@ -112,6 +112,6 @@ The complete software engineering documentation is organized chronologically fol
 
 Watch a practical demonstration of the calculator and graphical user interface:
 
-[![Calculator Video Demo](https://img.youtube.com/vi/FplfppbxDv4/maxresdefault.jpg)](https://youtu.be/FplfppbxDv4)
+[![Calculator Video Demo](https://img.youtube.com/vi/FplfppbxDv4/hqdefault.jpg)](https://youtu.be/FplfppbxDv4)
 
 *(If you prefer to download or view the raw file directly, you can find it in the [`assets/demo.mp4`](assets/demo.mp4) folder).*
