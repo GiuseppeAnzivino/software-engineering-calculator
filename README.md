@@ -17,6 +17,7 @@
 - [Project Planning & Methodology](#-project-planning--methodology)
 - [Architecture & Design Patterns](#-architecture--design-patterns)
 - [Tech Stack & Implementation](#-tech-stack--implementation)
+- [Testing & Quality Assurance](#-testing--quality-assurance)
 - [Key Features & Requirements](#-key-features--requirements)
 
 ---
@@ -53,6 +54,18 @@ The software engineering lifecycle encompassed complete project planning, WBS (W
   * `Operation`: Implements arithmetic and algebraic logic.
   * `VarMap`: Manages the 26 variable memory registers (`a` to `z`).
   * Custom Exception classes (`EmptyStackException`, `FullStackException`, `ArithmeticException`, `OverflowException`, `InputException`, `VarException`).
+
+---
+
+## 🧪 Testing & Quality Assurance
+* **Test Planning:** Comprehensive verification focusing heavily on the core computational model and data structures, complemented by manual GUI and functional interaction testing.
+* **Functional Test Cases (FTC):** End-to-end scenarios validating arithmetic flows (`FTC-01`), stack manipulations (`FTC-02`), and variable memory operations (`FTC-03`) along with proper error handling (e.g., division by zero, empty stack).
+* **Automated Unit Tests (JUnit):** Exhaustive test suites covering all core classes with 100% passing results:
+  * `ComplexTest`: Validates real/imaginary getters, string formatting, zero checks, basic arithmetic (+, -, *, /), square roots (`sqrt`), and sign inversion (`reverse`).
+  * `OperationTest`: Verifies correct execution of operations directly through the stack layer and proper exception throwing.
+  * `ParserTest`: Tests string tokenization, number checks (`isComplex`, `isRealPart`, `isJPart`), parsing logic, and syntax exception handling.
+  * `StackTest`: Ensures stack behavior under `clear`, `drop`, `dup`, `swap`, and `over` commands including edge cases on empty stacks.
+  * `VarMapTest`: Tests variable storage, stack-to-variable (`>var`) and variable-to-stack (`<var`) transfers, arithmetic variable updates (`+var`, `-var`), and mapping string outputs.
 
 ---
 
