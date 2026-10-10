@@ -13,17 +13,18 @@
 ---
 
 ## 📋 Table of Contents
-- [About the Project](#-about-the-project)
-- [Project Planning & Methodology](#-project-planning--methodology)
-- [Project Documentation (`/docs`)](#-project-documentation-docs)
-- [Architecture & Design Patterns](#-architecture--design-patterns)
-- [Tech Stack & Implementation](#-tech-stack--implementation)
-- [Testing & Quality Assurance](#-testing--quality-assurance)
-- [Key Features & Requirements](#-key-features--requirements)
-- [Video Demo](#-video-demo)
+- [About the Project](#about)
+- [Project Planning & Methodology](#planning)
+- [Project Documentation (`/docs`)](#docs)
+- [Architecture & Design Patterns](#architecture)
+- [Tech Stack & Implementation](#tech-stack)
+- [Testing & Quality Assurance](#testing)
+- [Key Features & Requirements](#features)
+- [Video Demo](#demo)
 
 ---
 
+<a id="about"></a>
 ## 🚀 About the Project
 This project implements a fully functional scientific calculator designed around a **stack-based architecture** and following a rigorous **waterfall development model**. It handles complex numbers (with real and imaginary parts in Cartesian notation) and executes operations sequentially by pulling operands from the stack and pushing results back. 
 
@@ -31,6 +32,7 @@ The software engineering lifecycle encompassed complete project planning, WBS (W
 
 ---
 
+<a id="planning"></a>
 ## 📊 Project Planning & Methodology
 - **Development Model:** Waterfall model (structured macro-phases: Planning, Requirements Engineering, System Design, Implementation, and Testing).
 - **Scheduling & Tracking:** Managed via Gantt charts and Work Breakdown Structures (WBS) (using GanttPRO and dedicated tracking documents) to ensure strict adherence to milestones.
@@ -38,6 +40,7 @@ The software engineering lifecycle encompassed complete project planning, WBS (W
 
 ---
 
+<a id="docs"></a>
 ## 📂 Project Documentation (`/docs`)
 The complete software engineering documentation is organized chronologically following the waterfall lifecycle and is stored inside the `docs/` directory:
 
@@ -49,6 +52,7 @@ The complete software engineering documentation is organized chronologically fol
 
 ---
 
+<a id="architecture"></a>
 ## 🏗️ Architecture & Design Patterns
 - **Shared Repository Architecture:** The system relies on a centralized persistent component layout to facilitate data sharing across modules.
 - **UML Modeling:** Extensive design phase incorporating **Class Diagrams**, **Sequence Diagrams** (for operands insertion, operations, stack manipulation, and variable management), **Activity Diagrams**, and **State Machine Diagrams**.
@@ -56,6 +60,7 @@ The complete software engineering documentation is organized chronologically fol
 
 ---
 
+<a id="tech-stack"></a>
 ## 🛠️ Tech Stack & Implementation
 - **Language & Build Tool:** Java, managed via **Maven** (`pom.xml`) for dependency handling and project building.
 - **IDE:** NetBeans
@@ -70,6 +75,7 @@ The complete software engineering documentation is organized chronologically fol
 
 ---
 
+<a id="testing"></a>
 ## 🧪 Testing & Quality Assurance
 - **Test Planning:** Comprehensive verification focusing heavily on the core computational model and data structures, complemented by manual GUI and functional interaction testing.
 - **Functional Test Cases (FTC):** End-to-end scenarios validating arithmetic flows (`FTC-01`), stack manipulations (`FTC-02`), and variable memory operations (`FTC-03`) along with proper error handling (e.g., division by zero, empty stack).
@@ -82,6 +88,7 @@ The complete software engineering documentation is organized chronologically fol
 
 ---
 
+<a id="features"></a>
 ## ✨ Key Features & Requirements
 
 ### 1. Complex Numbers & Basic Operations
@@ -108,6 +115,7 @@ The complete software engineering documentation is organized chronologically fol
 
 ---
 
+<a id="demo"></a>
 ## 📺 Video Demo
 
 Watch a practical demonstration of the calculator and graphical user interface:
