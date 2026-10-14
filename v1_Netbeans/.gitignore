@@ -1,0 +1,25 @@
+# --- NetBeans ---
+**/nbproject/private/
+**/build/
+**/dist/
+**/nbbuild/
+**/nb-configuration.xml
+
+# --- Java & Build Systems ---
+*.class
+*.log
+target/
+
+# --- Operating Systems ---
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory

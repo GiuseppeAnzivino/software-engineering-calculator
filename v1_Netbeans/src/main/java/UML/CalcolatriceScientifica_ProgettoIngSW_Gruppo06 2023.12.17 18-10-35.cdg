@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CalcolatriceScientifica_ProgettoIngSW_Gruppo06">
+  <ClassDiagramComponents>
+    <Class name="Parser" package="Calcolatrice" visibility="public" xPosition="33.0" yPosition="20.0">
+      <Fields>
+        <Field name="buffer" type="Stack" visibility="private"/>
+        <Field name="variable" type="VarMap" visibility="private"/>
+        <Field name="operation" type="Operation" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Deque&lt;Complex&gt;" name="stack"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isComplex" returnType="String" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="isRealPart" returnType="String" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="isJPart" returnType="String" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="parse" returnType="void" visibility="public">
+          <Argument type="String" name="input"/>
+          <Argument type="String" name="svolgi"/>
+        </Method>
+        <Method name="checkerNumber" returnType="void" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="checkerVar" returnType="void" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="varMapToString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Operation" package="Calcolatrice" visibility="public" xPosition="519.0" yPosition="20.0">
+      <Fields>
+        <Field name="stack" type="Deque&lt;Complex&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Deque&lt;Complex&gt;" name="stack"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="insert" returnType="void" visibility="public">
+          <Argument type="Complex" name="num"/>
+        </Method>
+        <Method name="add" returnType="void" visibility="public"/>
+        <Method name="sub" returnType="void" visibility="public"/>
+        <Method name="times" returnType="void" visibility="public"/>
+        <Method name="division" returnType="void" visibility="public"/>
+        <Method name="sqrt" returnType="void" visibility="public"/>
+        <Method name="reverse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXMLDocumentController" package="Calcolatrice" visibility="public" xPosition="958.0" yPosition="175.0">
+      <Fields>
+        <Field name="stack" type="Deque&lt;Complex&gt;" visibility="private"/>
+        <Field name="parser" type="Parser" visibility="private"/>
+        <Field name="TextStandard" type="TextArea" visibility="private"/>
+        <Field name="labelStandard" type="TextArea" visibility="private"/>
+        <Field name="TextVariabili" type="TextArea" visibility="private"/>
+        <Field name="labelVariabili" type="TextArea" visibility="private"/>
+        <Field name="StackStandard" type="TextArea" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="package"/>
+        <Method name="pointAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="zeroAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="oneAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="twoAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="threeAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fourAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fiveAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="sixAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="sevenAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="eightAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="nineAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="addAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="subAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="reverseAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="divAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="timesAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="sqrtAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="clearAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="dropAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="dupAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="swapAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="overAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="delAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="acAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="enterAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="ac1Action" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="posAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="negAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="aAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="bAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="cAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="dAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="eAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="fAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="gAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="hAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="iAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="jAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="kAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="lAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="mAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="nAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="oAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="pAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="qAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="rAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="sAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="tAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="uAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="vAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="wAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="xAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="yAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="zAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="varToStackAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="stackToVarAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="addVarAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="subVarAction" returnType="void" visibility="package">
+          <Argument type="ActionEvent" name="event"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VarException" package="Calcolatrice.Exceptions" visibility="public" xPosition="195.0" yPosition="1038.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="EmptyStackException" package="Calcolatrice.Exceptions" visibility="public" xPosition="43.0" yPosition="902.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ArithmeticException" package="Calcolatrice.Exceptions" visibility="public" xPosition="303.0" yPosition="902.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="OverflowException" package="Calcolatrice.Exceptions" visibility="public" xPosition="563.0" yPosition="902.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="InputException" package="Calcolatrice.Exceptions" visibility="public" xPosition="449.0" yPosition="1038.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="msg"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="VarMap" package="Calcolatrice" visibility="public" xPosition="20.0" yPosition="518.0">
+      <Fields>
+        <Field name="variable" type="TreeMap&lt;Character, Complex&gt;" visibility="private"/>
+        <Field name="stack" type="Deque&lt;Complex&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Deque&lt;Complex&gt;" name="stack"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getValue" returnType="Complex" visibility="public">
+          <Argument type="char" name="key"/>
+        </Method>
+        <Method name="stackToVar" returnType="void" visibility="public">
+          <Argument type="char" name="key"/>
+        </Method>
+        <Method name="varToStack" returnType="void" visibility="public">
+          <Argument type="char" name="key"/>
+        </Method>
+        <Method name="addVar" returnType="void" visibility="public">
+          <Argument type="char" name="key"/>
+        </Method>
+        <Method name="subVar" returnType="void" visibility="public">
+          <Argument type="char" name="key"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ScientificCalculator" package="Calcolatrice" visibility="public" xPosition="817.0" yPosition="34.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Complex" package="Calcolatrice" visibility="public" xPosition="592.0" yPosition="532.0">
+      <Fields>
+        <Field name="realPart" type="double" visibility="private"/>
+        <Field name="jPart" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="realPart"/>
+          <Argument type="double" name="jPart"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRealPart" returnType="double" visibility="public"/>
+        <Method name="getJPart" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="round" returnType="double" visibility="private">
+          <Argument type="double" name="n"/>
+        </Method>
+        <Method name="isZero" returnType="boolean" visibility="public"/>
+        <Method name="add" returnType="Complex" visibility="public">
+          <Argument type="Complex" name="num"/>
+        </Method>
+        <Method name="sub" returnType="Complex" visibility="public">
+          <Argument type="Complex" name="num"/>
+        </Method>
+        <Method name="times" returnType="Complex" visibility="public">
+          <Argument type="Complex" name="num"/>
+        </Method>
+        <Method name="division" returnType="Complex" visibility="public">
+          <Argument type="Complex" name="num"/>
+        </Method>
+        <Method name="sqrt" returnType="Complex" visibility="public"/>
+        <Method name="reverse" returnType="Complex" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Stack" package="Calcolatrice" visibility="public" xPosition="318.0" yPosition="334.0">
+      <Fields>
+        <Field name="stack" type="Deque&lt;Complex&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Deque&lt;Complex&gt;" name="stack"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="clear" returnType="void" visibility="public"/>
+        <Method name="drop" returnType="void" visibility="public"/>
+        <Method name="dup" returnType="void" visibility="public"/>
+        <Method name="swap" returnType="void" visibility="public"/>
+        <Method name="over" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Calcolatrice.Complex" target="Calcolatrice.Complex" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Calcolatrice.Operation" target="Calcolatrice.Complex" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="stack" source="Calcolatrice.VarMap" target="Calcolatrice.Complex" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Deque&lt;Complex&gt;"/>
+    <HasRelation name="stack" source="Calcolatrice.Operation" target="Calcolatrice.Complex" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Deque&lt;Complex&gt;"/>
+    <HasRelation name="variable" source="Calcolatrice.Parser" target="Calcolatrice.VarMap" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="VarMap"/>
+    <HasRelation name="variable" source="Calcolatrice.VarMap" target="Calcolatrice.Complex" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="TreeMap&lt;Character, Complex&gt;"/>
+    <HasRelation name="stack" source="Calcolatrice.FXMLDocumentController" target="Calcolatrice.Complex" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Deque&lt;Complex&gt;"/>
+    <UseRelation source="Calcolatrice.VarMap" target="Calcolatrice.Complex" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="parser" source="Calcolatrice.FXMLDocumentController" target="Calcolatrice.Parser" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="buffer" source="Calcolatrice.Parser" target="Calcolatrice.Stack" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="stack" source="Calcolatrice.Stack" target="Calcolatrice.Complex" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Deque&lt;Complex&gt;"/>
+    <HasRelation name="operation" source="Calcolatrice.Parser" target="Calcolatrice.Operation" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

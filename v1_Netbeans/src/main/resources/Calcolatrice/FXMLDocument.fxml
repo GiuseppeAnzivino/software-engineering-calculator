@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Calcolatrice.FXMLDocumentController">
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="569.0" prefWidth="658.0" style="-fx-background-color: beige;" text="Calcolatrice" />
+      <HBox prefHeight="533.0" prefWidth="658.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+         <children>
+          <AnchorPane>
+               <children>
+                  <VBox prefHeight="533.0" prefWidth="208.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="21.0" prefWidth="221.0" text="Stack">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="StackStandard" editable="false" prefHeight="453.0" prefWidth="208.0" promptText="Stack Vuoto">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </TextArea>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane prefHeight="400.0" prefWidth="410.0">
+               <children>
+                  <TabPane prefHeight="549.0" prefWidth="410.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="123">
+                        <content>
+                          <AnchorPane prefHeight="365.0" prefWidth="410.0">
+                                 <children>
+                                    <VBox prefHeight="417.0" prefWidth="410.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <TextArea fx:id="labelStandard" editable="false" opacity="0.5" prefHeight="88.0" prefWidth="400.0">
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" top="20.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <TextArea fx:id="TextStandard" prefHeight="88.0" prefWidth="400.0" promptText="Inserisci un Valore">
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" top="20.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <GridPane alignment="CENTER" prefHeight="184.0" prefWidth="410.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Button fx:id="seven" mnemonicParsing="false" onAction="#sevenAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: Orange;" text="7">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="eight" mnemonicParsing="false" onAction="#eightAction" prefHeight="68.0" prefWidth="57.0" style="-fx-background-color: Orange;" text="8" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="nine" mnemonicParsing="false" onAction="#nineAction" prefHeight="77.0" prefWidth="61.0" style="-fx-background-color: Orange;" text="9" GridPane.columnIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="four" mnemonicParsing="false" onAction="#fourAction" prefHeight="103.0" prefWidth="69.0" style="-fx-background-color: Orange;" text="4" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="five" mnemonicParsing="false" onAction="#fiveAction" prefHeight="92.0" prefWidth="68.0" style="-fx-background-color: Orange;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="six" mnemonicParsing="false" onAction="#sixAction" prefHeight="122.0" prefWidth="78.0" style="-fx-background-color: Orange;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="one" mnemonicParsing="false" onAction="#oneAction" prefHeight="68.0" prefWidth="75.0" style="-fx-background-color: Orange;" text="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="zero" mnemonicParsing="false" onAction="#zeroAction" prefHeight="61.0" prefWidth="68.0" style="-fx-background-color: Orange;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="two" mnemonicParsing="false" onAction="#twoAction" prefHeight="73.0" prefWidth="67.0" style="-fx-background-color: Orange;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="three" mnemonicParsing="false" onAction="#threeAction" prefHeight="107.0" prefWidth="74.0" style="-fx-background-color: Orange;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="reverse" mnemonicParsing="false" onAction="#reverseAction" prefHeight="63.0" prefWidth="64.0" style="-fx-background-color: lightgrey;" text="+ -" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="point" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#pointAction" prefHeight="85.0" prefWidth="81.0" style="-fx-background-color: lightgrey;" text="." GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="division" mnemonicParsing="false" onAction="#divAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="/" GridPane.columnIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="add" mnemonicParsing="false" onAction="#addAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="sub" mnemonicParsing="false" onAction="#subAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="-" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="times" mnemonicParsing="false" onAction="#timesAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="*" GridPane.columnIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="delete" mnemonicParsing="false" onAction="#delAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: #232323;" text="DEL" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="drop" mnemonicParsing="false" onAction="#dropAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: dimgrey;" text="DROP" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="sqrt" mnemonicParsing="false" onAction="#sqrtAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: lightgrey;" text="SQRT" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="positive" mnemonicParsing="false" onAction="#posAction" prefHeight="39.0" prefWidth="63.0" style="-fx-background-color: #232323;" text="(+)" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                                <Button fx:id="dup" mnemonicParsing="false" onAction="#dupAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: dimgrey;" text="DUP" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="swap" mnemonicParsing="false" onAction="#swapAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: dimgrey;" text="SWAP" textFill="WHITE" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="cancel" mnemonicParsing="false" onAction="#acAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: #232323;" text="AC" textFill="WHITE" GridPane.columnIndex="7" GridPane.columnSpan="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="clear" mnemonicParsing="false" onAction="#clearAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: dimgrey;" text="CLEAR" textFill="WHITE" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="over" mnemonicParsing="false" onAction="#overAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: dimgrey;" text="OVER" textFill="WHITE" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="enter" mnemonicParsing="false" onAction="#enterAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: powderblue;" text="ENTER" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="negative" mnemonicParsing="false" onAction="#negAction" prefHeight="39.0" prefWidth="63.0" style="-fx-background-color: #232323;" text="(-)" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                   <font>
+                                                      <Font size="11.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="a-z">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="418.0" prefWidth="410.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <TextArea fx:id="labelVariabili" editable="false" opacity="0.5" prefHeight="97.0" prefWidth="410.0">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <TextArea fx:id="TextVariabili" prefHeight="97.0" prefWidth="410.0" promptText="Inserisci una Variabile">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </TextArea>
+                                          <GridPane alignment="CENTER" prefHeight="203.0" prefWidth="450.0">
+                                             <children>
+                                                <Button fx:id="a" mnemonicParsing="false" onAction="#aAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="a">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="b" mnemonicParsing="false" onAction="#bAction" prefHeight="68.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="b" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="c" mnemonicParsing="false" onAction="#cAction" prefHeight="77.0" prefWidth="61.0" style="-fx-background-color: lightgrey;" text="c" GridPane.columnIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="g" mnemonicParsing="false" onAction="#gAction" prefHeight="103.0" prefWidth="69.0" style="-fx-background-color: lightgrey;" text="g" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="h" mnemonicParsing="false" onAction="#hAction" prefHeight="92.0" prefWidth="68.0" style="-fx-background-color: lightgrey;" text="h" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="i" mnemonicParsing="false" onAction="#iAction" prefHeight="122.0" prefWidth="78.0" style="-fx-background-color: lightgrey;" text="i" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="m" mnemonicParsing="false" onAction="#mAction" prefHeight="68.0" prefWidth="75.0" style="-fx-background-color: lightgrey;" text="m" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="t" mnemonicParsing="false" onAction="#tAction" prefHeight="61.0" prefWidth="68.0" style="-fx-background-color: lightgrey;" text="t" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="n" mnemonicParsing="false" onAction="#nAction" prefHeight="73.0" prefWidth="67.0" style="-fx-background-color: lightgrey;" text="n" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="o" mnemonicParsing="false" onAction="#oAction" prefHeight="107.0" prefWidth="74.0" style="-fx-background-color: lightgrey;" text="o" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="u" mnemonicParsing="false" onAction="#uAction" prefHeight="63.0" prefWidth="64.0" style="-fx-background-color: lightgrey;" text="u" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="s" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sAction" prefHeight="85.0" prefWidth="81.0" style="-fx-background-color: lightgrey;" text="s" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="d" mnemonicParsing="false" onAction="#dAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="d" GridPane.columnIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="j" mnemonicParsing="false" onAction="#jAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="j" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="k" mnemonicParsing="false" onAction="#kAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="k" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="e" mnemonicParsing="false" onAction="#eAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="e" GridPane.columnIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="p" mnemonicParsing="false" onAction="#pAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: lightgrey;" text="p" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="v" mnemonicParsing="false" onAction="#vAction" prefHeight="51.0" prefWidth="92.0" style="-fx-background-color: lightgrey;" text="v" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="ac" mnemonicParsing="false" onAction="#ac1Action" prefHeight="31.0" prefWidth="125.0" style="-fx-background-color: #232323;" text="AC" textFill="WHITE" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="varToStack" mnemonicParsing="false" onAction="#varToStackAction" prefHeight="31.0" prefWidth="109.0" style="-fx-background-color: Orange;" text="&lt;var" GridPane.columnIndex="6" GridPane.columnSpan="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="stackToVar" mnemonicParsing="false" onAction="#stackToVarAction" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: orange;" text="&gt;var" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="addVar" mnemonicParsing="false" onAction="#addVarAction" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: orange;" text="+var" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="subVar" mnemonicParsing="false" onAction="#subVarAction" prefHeight="31.0" prefWidth="113.0" style="-fx-background-color: orange;" text="-var" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="y" mnemonicParsing="false" onAction="#yAction" prefHeight="61.0" prefWidth="68.0" style="-fx-background-color: lightgrey;" text="y" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="z" mnemonicParsing="false" onAction="#zAction" prefHeight="61.0" prefWidth="68.0" style="-fx-background-color: lightgrey;" text="z" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="q" mnemonicParsing="false" onAction="#qAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="q" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="w" mnemonicParsing="false" onAction="#wAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="w" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="f" mnemonicParsing="false" onAction="#fAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="f" GridPane.columnIndex="5">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="l" mnemonicParsing="false" onAction="#lAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="l" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button fx:id="r" mnemonicParsing="false" onAction="#rAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="r" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                                <Button mnemonicParsing="false" onAction="#xAction" prefHeight="67.0" prefWidth="57.0" style="-fx-background-color: lightgrey;" text="x" GridPane.columnIndex="5" GridPane.rowIndex="3" fx:id="x">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                   </GridPane.margin>
+                                                </Button>
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
