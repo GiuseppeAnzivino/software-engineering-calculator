@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Scientific Calculator
+Exec=java -jar "/home/pepi/Coding/software-engineering-calculator/JAR_Version/ScientificCalculator.jar"
+Path=/home/pepi/Coding/software-engineering-calculator/JAR_Version
+Terminal=false

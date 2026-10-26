@@ -14,6 +14,7 @@
 
 ## 📋 Table of Contents
 - [About the Project](#about)
+- [Versions & How to Run](#versions)
 - [Project Planning & Methodology](#planning)
 - [Project Documentation (`/docs`)](#docs)
 - [Architecture & Design Patterns](#architecture)
@@ -29,6 +30,28 @@
 This project implements a fully functional scientific calculator designed around a **stack-based architecture** and following a rigorous **waterfall development model**. It handles complex numbers (with real and imaginary parts in Cartesian notation) and executes operations sequentially by pulling operands from the stack and pushing results back. 
 
 The software engineering lifecycle encompassed complete project planning, WBS (Work Breakdown Structure) creation, Gantt scheduling, requirements elicitation, detailed UML design, unit/functional testing, and clean Java implementation.
+
+---
+
+<a id="versions"></a>
+## 📦 Versions & How to Run
+The project is available in three versions, each in its own folder with a dedicated README:
+
+| Folder | Description | Best for |
+|---|---|---|
+| [`JAR_Version/`](JAR_Version/) | Ready-to-run executable JAR with launchers for Windows, macOS and Linux | Just **using** the calculator, no build needed |
+| [`v1_Netbeans/`](v1_Netbeans/) | Original project developed with Apache NetBeans | Historical reference, opening the project in NetBeans |
+| [`v2_VSCode/`](v2_VSCode/) | Maven project configured for Visual Studio Code, with the `javafx-maven-plugin` (`mvn javafx:run`) | Building, running and developing on **Linux** |
+
+The application source code is the same in all versions: only the way the project is packaged, configured and launched changes. The second version was created because the NetBeans one ran into JavaFX / JDK / OS incompatibilities on Linux.
+
+> **Note:** all versions require a **JDK 8 with JavaFX** (e.g. Zulu JDK FX 8 or Liberica Full JDK 8). See the README of each folder for details.
+
+**Quick start (no build):**
+```bash
+cd JAR_Version
+java -jar ScientificCalculator.jar
+```
 
 ---
 
@@ -63,7 +86,7 @@ The complete software engineering documentation is organized chronologically fol
 <a id="tech-stack"></a>
 ## 🛠️ Tech Stack & Implementation
 - **Language & Build Tool:** Java, managed via **Maven** (`pom.xml`) for dependency handling and project building.
-- **IDE:** NetBeans
+- **IDE:** Apache NetBeans (`v1_Netbeans`) and Visual Studio Code (`v2_VSCode`)
 - **UI Framework:** JavaFX, designed using **JavaFX Scene Builder 2.0** (supporting dual interfaces: Standard Calculator and Variables View).
 - **Core Components:**
   - `FXMLDocumentController`: Manages UI interactions and event handling.
