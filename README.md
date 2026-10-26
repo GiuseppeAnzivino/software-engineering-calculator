@@ -23,6 +23,7 @@
 - [Key Features & Requirements](#features)
 - [Video Demo](#demo)
 - [Modern Class Diagram Generation](#UMLGeneration)
+- [LIcense](#license)
 
 ---
 
@@ -334,3 +335,8 @@ classDiagram
     Stack o-- Complex
     VarMap o-- Complex
 ```
+
+---
+<a id="license"></a>
+## 📄 License
+All rights reserved. This repository is published for viewing and educational reference only. See [`LICENSE`](LICENSE) for details.
