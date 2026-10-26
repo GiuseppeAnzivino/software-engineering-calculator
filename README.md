@@ -6,9 +6,9 @@
 
 ## 👥 Collaborators
 - **Anzivino Giuseppe Fabrizio** — [@GiuseppeAnzivino](https://github.com/GiuseppeAnzivino)
-- **Borrelli Simone** — [@GitHub_Username](https://github.com/GitHub_Username)
-- **Buongiorno Aldo** — [@GitHub_Username](https://github.com/GitHub_Username)
-- **Calabrese Raffaele** — [@GitHub_Username](https://github.com/GitHub_Username)
+- **Borrelli Simone** — [@simoneborrelli07](https://github.com/simoneborrelli07)
+- **Buongiorno Aldo** — [@AldoBuongiorno](https://github.com/AldoBuongiorno)
+- **Calabrese Raffaele** — [@RaffaeleCalabrese2](https://github.com/RaffaeleCalabrese2)
 
 ---
 
